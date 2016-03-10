@@ -126,6 +126,14 @@
 	 		$error = true;
 		} 
 	}
+	for($i=0;$i<$filas;$i++) //for para revisar el código de pertenencia étnica o la columna 11
+	{
+		if ($datos[$i][11]!=1 && $datos[$i][11]!=2 && $datos[$i][11]!=3 && $datos[$i][11]!=4 && $datos[$i][11]!=5 && $datos[$i][11]!=6)
+		{ 
+			echo "Debe revisar el código de pertenencia étnica del paciente con identificación ".$datos[$i][4]."<br>";
+	 		$error = true;
+		} 
+	}
 	if($error==false) //Si no se muestra ningún error, le notifica al usuario que el archivo está correcto
 	{
 		echo "El archivo está perfecto!";
