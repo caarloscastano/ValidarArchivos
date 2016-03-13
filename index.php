@@ -134,6 +134,14 @@
 	 		$error = true;
 		} 
 	}
+	for($i=0;$i<$filas;$i++) //for para revisar el código de ocupación o la columna 12
+	{
+		if ($datos[$i][12]!=9999 && $datos[$i][12]!=9998)
+		{ 
+			echo "Debe revisar el código de ocupación del paciente con identificación ".$datos[$i][4]."<br>";
+	 		$error = true;
+		} 
+	}
 	if($error==false) //Si no se muestra ningún error, le notifica al usuario que el archivo está correcto
 	{
 		echo "El archivo está perfecto!";
