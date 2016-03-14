@@ -170,9 +170,9 @@
 			} 
 		} 
 	}
-	for($i=0;$i<$filas;$i++) //for para revisar el código de nivel educativo o la columna 13
+	for($i=0;$i<$filas;$i++) //for para revisar la sífilis gestacional o congénita o la columna 15
 	{
-		if ($datos[$i][13]!=1 && $datos[$i][13]!=2 && $datos[$i][13]!=3 && $datos[$i][13]!=4 && $datos[$i][13]!=5 && $datos[$i][13]!=6 && $datos[$i][13]!=7 && $datos[$i][13]!=8 && $datos[$i][13]!=9 && $datos[$i][13]!=10 && $datos[$i][13]!=11 && $datos[$i][13]!=12 && $datos[$i][13]!=13)
+		if ($datos[$i][15]!=0 && $datos[$i][15]!=1 && $datos[$i][15]!=2 && $datos[$i][15]!=3 && $datos[$i][15]!=4)
 		{ 
 			echo "<h1><font color='black'>Revisar el código de nivel educativo del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
