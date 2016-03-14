@@ -47,7 +47,8 @@
 		//echo $datos[$i][$j]."|";
 		if($datos[$i][0]!=2)
 		{
-			echo "Revisar el tipo de registro del paciente con identificación ".$datos[$i][4]."<br>";
+			//echo "Revisar el tipo de registro del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el tipo de registro del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -55,7 +56,7 @@
 	{
 		if($datos[$i][1]!=($i+1))
 		{
-			echo "Revisar el consecutivo del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el consecutivo del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -63,7 +64,7 @@
 	{
 		if($datos[$i][2]!=196980002601 && $datos[$i][2]!=196980001601 && $datos[$i][2]!=99)
 		{
-			echo "Revisar el código de habilitación del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el código de habilitación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -71,7 +72,7 @@
 	{
 		if($datos[$i][3]!="RC" && $datos[$i][3]!="TI" && $datos[$i][3]!="CC" && $datos[$i][3]!="PA" && $datos[$i][3]!="MS" && $datos[$i][3]!="AS" && $datos[$i][3]!="NV")
 		{
-			echo "Revisar el tipo de documento del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el tipo de documento del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -81,7 +82,7 @@
 	{
 		if($datos[$i][5]=="")
 		{
-			echo "Debe ingresar el primer apellido del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Debe ingresar el primer apellido del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -89,7 +90,7 @@
 	{
 		if($datos[$i][6]=="")
 		{
-			echo "Debe ingresar el segundo apellido del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Debe ingresar el segundo apellido del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -97,7 +98,7 @@
 	{
 		if($datos[$i][7]=="")
 		{
-			echo "Debe ingresar el primer nombre del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Debe ingresar el primer nombre del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -105,8 +106,8 @@
 	{
 		if($datos[$i][8]=="")
 		{
-			echo "Debe ingresar el segundo nombre del paciente con identificación ".$datos[$i][4]."<br>";
-			echo "En el caso de que no tenga segundo nombre, debe ingresar la palabra 'NONE'<br>";
+			echo "<h1><font color='black'>Debe ingresar el segundo nombre del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
+			echo "<h1><font color='black'>En el caso de que no tenga segundo nombre, debe ingresar la palabra 'NONE'</font></h1><br>";
 			$error = true;
 		}
 	}
@@ -114,7 +115,7 @@
 	{
 		if (0==preg_match('/\d{4}-\d{2}-\d{2}/',$datos[$i][9]))
 		{ 
-			echo "Debe revisar la fecha de nacimiento del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar la fecha de nacimiento del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
 		} 
 	}
@@ -122,7 +123,7 @@
 	{
 		if ($datos[$i][10]!="M" && $datos[$i][10]!="F")
 		{ 
-			echo "Debe revisar el sexo del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el sexo del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
 		} 
 	}
@@ -130,7 +131,7 @@
 	{
 		if ($datos[$i][11]!=1 && $datos[$i][11]!=2 && $datos[$i][11]!=3 && $datos[$i][11]!=4 && $datos[$i][11]!=5 && $datos[$i][11]!=6)
 		{ 
-			echo "Debe revisar el código de pertenencia étnica del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el código de pertenencia étnica del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
 		} 
 	}
@@ -138,7 +139,7 @@
 	{
 		if ($datos[$i][12]!=9999 && $datos[$i][12]!=9998)
 		{ 
-			echo "Debe revisar el código de ocupación del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el código de ocupación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
 		} 
 	}
@@ -146,7 +147,7 @@
 	{
 		if ($datos[$i][13]!=1 && $datos[$i][13]!=2 && $datos[$i][13]!=3 && $datos[$i][13]!=4 && $datos[$i][13]!=5 && $datos[$i][13]!=6 && $datos[$i][13]!=7 && $datos[$i][13]!=8 && $datos[$i][13]!=9 && $datos[$i][13]!=10 && $datos[$i][13]!=11 && $datos[$i][13]!=12 && $datos[$i][13]!=13)
 		{ 
-			echo "Debe revisar el código de nivel educativo del paciente con identificación ".$datos[$i][4]."<br>";
+			echo "<h1><font color='black'>Revisar el código de nivel educativo del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
 		} 
 	}
@@ -156,14 +157,14 @@
 		{
 			if($datos[$i][14]!=0 && $datos[$i][14]!=1 && $datos[$i][14]!=2 && $datos[$i][14]!=3)
 			{
-				echo "Debe revisar la gestación del paciente con identificación ".$datos[$i][4]."<br>";
+				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 			$error = true;
 			} 
 		} 
 	}
 	if($error==false) //Si no se muestra ningún error, le notifica al usuario que el archivo está correcto
 	{
-		echo "El archivo está perfecto!";
+		echo "<h1><font color='green'>El archivo está perfecto!</font></h1>";
 	}
 	fclose($fp);
 ?>
