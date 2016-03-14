@@ -150,6 +150,17 @@
 	 		$error = true;
 		} 
 	}
+	for($i=0;$i<$filas;$i++) //for para revisar la gestación o la columna 14
+	{
+		if ($datos[$i][10]!="M")
+		{
+			if($datos[$i][14]!=0 && $datos[$i][14]!=1 && $datos[$i][14]!=2 && $datos[$i][14]!=3)
+			{
+				echo "Debe revisar la gestación del paciente con identificación ".$datos[$i][4]."<br>";
+	 			$error = true;
+			} 
+		} 
+	}
 	if($error==false) //Si no se muestra ningún error, le notifica al usuario que el archivo está correcto
 	{
 		echo "El archivo está perfecto!";
