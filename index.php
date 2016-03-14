@@ -153,13 +153,29 @@
 	}
 	for($i=0;$i<$filas;$i++) //for para revisar la gestación o la columna 14
 	{
-		if ($datos[$i][10]!="M")
+		if ($datos[$i][10]=="F") //valida si el paciente es mujer
 		{
-			if($datos[$i][14]!=0 && $datos[$i][14]!=1 && $datos[$i][14]!=2 && $datos[$i][14]!=3)
+			if($datos[$i][14]!=0 && $datos[$i][14]!=1 && $datos[$i][14]!=3)
 			{
 				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 			$error = true;
 			} 
+		}
+		elseif ($datos[$i][10]=="M") //valida si el paciente es hombre
+		{
+		 	if($datos[$i][14]!=2)
+			{
+				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
+	 			$error = true;
+			} 
+		} 
+	}
+	for($i=0;$i<$filas;$i++) //for para revisar el código de nivel educativo o la columna 13
+	{
+		if ($datos[$i][13]!=1 && $datos[$i][13]!=2 && $datos[$i][13]!=3 && $datos[$i][13]!=4 && $datos[$i][13]!=5 && $datos[$i][13]!=6 && $datos[$i][13]!=7 && $datos[$i][13]!=8 && $datos[$i][13]!=9 && $datos[$i][13]!=10 && $datos[$i][13]!=11 && $datos[$i][13]!=12 && $datos[$i][13]!=13)
+		{ 
+			echo "<h1><font color='black'>Revisar el código de nivel educativo del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
+	 		$error = true;
 		} 
 	}
 	if($error==false) //Si no se muestra ningún error, le notifica al usuario que el archivo está correcto
