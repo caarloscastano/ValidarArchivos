@@ -157,7 +157,7 @@
 		{
 			if($datos[$i][14]!=0 && $datos[$i][14]!=1 && $datos[$i][14]!=3)
 			{
-				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
+				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación mujer ".$datos[$i][4]."</font></h1><br>";
 	 			$error = true;
 			} 
 		}
@@ -165,19 +165,19 @@
 		{
 		 	if($datos[$i][14]!=2)
 			{
-				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
+				echo "<h1><font color='black'>Revisar la gestación del paciente con identificación hombre ".$datos[$i][4]."</font></h1><br>";
 	 			$error = true;
 			} 
 		} 
 	}
-	for($i=0;$i<$filas;$i++) //for para revisar la sífilis gestacional o congénita o la columna 15
+	/*for($i=0;$i<$filas;$i++) //for para revisar la sífilis gestacional o congénita o la columna 15
 	{
 		if ($datos[$i][15]!=0 && $datos[$i][15]!=1 && $datos[$i][15]!=2 && $datos[$i][15]!=3 && $datos[$i][15]!=4)
 		{ 
-			echo "<h1><font color='black'>Revisar el código de nivel educativo del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
+			echo "<h1><font color='black'>Revisar la sífilis gestacional o congénita del paciente con identificación ".$datos[$i][4]."</font></h1><br>";
 	 		$error = true;
 		} 
-	}
+	}*/
 	if($error==false) //Si no se muestra ningún error, le notifica al usuario que el archivo está correcto
 	{
 		echo "<h1><font color='green'>El archivo está perfecto!</font></h1>";
